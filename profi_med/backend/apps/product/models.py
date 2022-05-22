@@ -1,5 +1,5 @@
 from django.db import models
-# from backend.apps.accounts.models import User
+from backend.apps.accounts.models import User
 
 class Category(models.Model):
     name = models.CharField("название", max_length=50, unique=True)
@@ -48,32 +48,32 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
-#
-# class Review(models.Model):
-#     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="reviews")
-#     user_id = models.ForeignKey(User, on_delete=models.CASCADE,related_name="reviews")
-#     text = models.TextField("отзыв")
-#     created = models.DateTimeField(auto_now_add=True)
-#     is_active = models.BooleanField("активный", default=True)
-#
-#     class Meta:
-#         verbose_name = "отзыв"
-#         verbose_name_plural = "ОТЗЫВы"
-#         ordering = ['-created']
-#
-#     def __str__(self):
-#         return f'{self.id}'
-#
-# class BanerImage(models.Model):
-#     image = models.ImageField(upload_to='baners/')
-#     add_link = models.URLField()
-#     name = models.CharField("название", max_length=50)
-#     created = models.DateTimeField(auto_now_add=True)
-#     updated = models.DateTimeField(auto_now=True)
-#
-#     class Meta:
-#         verbose_name = "картинка для  баннера"
-#         verbose_name_plural = "картинки для банеров"
-#
-#     def __str__(self):
-#         return self.name
+
+class Review(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="reviews")
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE,related_name="reviews")
+    text = models.TextField("отзыв")
+    created = models.DateTimeField(auto_now_add=True)
+    is_active = models.BooleanField("активный", default=True)
+
+    class Meta:
+        verbose_name = "отзыв"
+        verbose_name_plural = "ОТЗЫВы"
+        ordering = ['-created']
+
+    def __str__(self):
+        return f'{self.id}'
+
+class BanerImage(models.Model):
+    image = models.ImageField(upload_to='baners/')
+    add_link = models.URLField()
+    name = models.CharField("название", max_length=50)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = "картинка для  баннера"
+        verbose_name_plural = "картинки для банеров"
+
+    def __str__(self):
+        return self.name
