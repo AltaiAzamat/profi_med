@@ -1,0 +1,34 @@
+{% extends 'base_tabler.html'%}
+
+{% block title %}
+list_product
+
+{% endblock %}
+{% block content %}
+
+{% for post in products %}
+ <div class="card shadow-sm">
+
+           <h3> {{ post.image.url }}</h3>
+
+            <div class="card-body">
+              <p class="card-text"> {{ post.name }}</p>
+
+                Главрач зав.отделения
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">
+                    перейти
+                  </button>
+                </div>
+                <small class="text-muted">{{ product.price }}</small>
+              </div>
+            </div>
+          </div>
+
+
+
+{% endfor %}
+aslkdmsdlkfmsdlkfm
+{% endblock %}

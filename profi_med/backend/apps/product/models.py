@@ -7,7 +7,7 @@ class Category(models.Model):
 
     class Meta:
         verbose_name = "категория"
-        verbose_name_plural = "категории"
+        verbose_name_plural = "Специалисты"
         ordering = ['name']
     def __str__(self):
         return self.name
@@ -31,8 +31,8 @@ class SubCategory(models.Model):
 
 
 class Product(models.Model):
-    name = models.CharField("навание",max_length=225)
-    descriptions = models.TextField("описание")
+    name = models.CharField("Имя",max_length=225)
+    descriptions = models.TextField("краткая биография")
     price = models.DecimalField("цена", max_digits=10,decimal_places=2)
     image = models.ImageField("фото", upload_to = "product_images/")
     category = models.ForeignKey(Category,on_delete=models.PROTECT)
@@ -42,8 +42,8 @@ class Product(models.Model):
     is_active = models.BooleanField("активный", default=True)
 
     class Meta:
-        verbose_name = "товар"
-        verbose_name_plural = "товары"
+        verbose_name = "Сотрудник"
+        verbose_name_plural = "Сотрудники"
         ordering = ['-created']
 
     def __str__(self):
