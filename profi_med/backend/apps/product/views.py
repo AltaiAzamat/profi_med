@@ -31,11 +31,18 @@ class IndexPage(ListView):
 class ProductListView(ListView):
     model = Product
     template_name = "product_list.html"
-    paginate_by = 6
+    paginate_by = 99
     context_object_name = 'products'
 
 
 
+# def new(request):
+#     return render(request, 'order/teplates/new.html')
+#
+# def index(request):
+#     num_img = Images.objects.all().count()
+#
+#     return render(request, 'product_list.html', context={'num_img': num_img})
 
 
 # def product(request):

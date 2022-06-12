@@ -1,4 +1,5 @@
-
+<!DOCTYPE html>
+{% load static %}
 <!--
 Template Name: Foxclore
 Author: <a href="https://www.os-templates.com/">OS Templates</a>
@@ -10,36 +11,42 @@ Licence URI: https://www.os-templates.com/template-terms
 <html lang="">
 <!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
 <head>
-{% load static %}
-<title>Foxclore</title>
+
+<title>Hospital
+</title>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
-
 </head>
 <body id="top">
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- Top Background Image Wrapper -->
-<div class="bgded overlay" style="background-image:url('images/demo/backgrounds/01.png');">
+
+<div class="bgded overlay" style="background-image:url('./static/images/giphy.gif');">
   <!-- ################################################################################################ -->
   <header id="header" class="hoc clear">
     <!-- ################################################################################################ -->
     <div id="logo" class="one_quarter first">
-      <h1><a href="index.html">Foxclore</a></h1>
-      <p>Placerat sem hendrerit</p>
+      <h1><a href="index.html">
+        {% block title%}
+        Главная
+        {% endblock %}
+      </a></h1>
+      <p>Страница</p>
     </div>
     <div class="three_quarter">
       <ul class="nospace clear">
         <li class="one_third first">
-          <div class="block clear"><a href="#"><i class="fas fa-phone"></i></a> <span><strong>Give us a call:</strong> +00 (123) 456 7890</span></div>
+          <div class="block clear"><a href="#"><i class="fas fa-phone"></i></a> <span><strong>Горячий номер:</strong> +00 (123) 456 7890</span></div>
         </li>
         <li class="one_third">
-          <div class="block clear"><a href="#"><i class="fas fa-envelope"></i></a> <span><strong>Send us a mail:</strong> support@domain.com</span></div>
+          <div class="block clear"><a href="#"><i class="fas fa-envelope"></i></a> <span><strong>Наш @mail аддрес:</strong> support@domain.com</span></div>
         </li>
         <li class="one_third">
-          <div class="block clear"><a href="#"><i class="fas fa-clock"></i></a> <span><strong> Mon. - Sat.:</strong> 08.00am - 18.00pm</span></div>
+          <div class="block clear"><a href="#"><i class="fas fa-clock"></i></a> <span><strong> Время работы:</strong> 24/7</span></div>
         </li>
       </ul>
     </div>
@@ -52,34 +59,34 @@ Licence URI: https://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
     <nav id="mainav">
       <ul class="clear">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a class="drop" href="#">Pages</a>
-          <ul>
-            <li><a href="{% static 'pages/gallery.html' %}">Gallery</a></li>
-            <li><a href="{% static 'pages/full-width.html' %}">Full Width</a></li>
-            <li><a href="{% static 'pages/sidebar-left.html' %}">Sidebar Left</a></li>
-            <li><a href="{% static 'pages/sidebar-right.html' %}">Sidebar Right</a></li>
-            <li><a href="{% static 'pages/basic-grid.html' %}">Basic Grid</a></li>
-            <li><a href="{% static 'pages/font-icons.html' %}">Font Icons</a></li>
-          </ul>
-        </li>
-        <li><a class="drop" href="#">Dropdown</a>
-          <ul>
-            <li><a href="#">Level 2</a></li>
-            <li><a class="drop" href="#">Level 2 + Drop</a>
-              <ul>
-                <li><a href="#">Level 3</a></li>
-                <li><a href="#">Level 3</a></li>
-                <li><a href="#">Level 3</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Level 2</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Link Text</a></li>
-        <li><a href="#">Link Text</a></li>
-        <li><a href="#">Link Text</a></li>
-        <li><a href="#">Long Link Text</a></li>
+
+
+        <li class="active"><a href="{% url 'index' %}">Главная</a></li>
+        <li><a href="{% url 'product_list' %}">Медецинский персонал</a>
+        <li><a href="{% url 'zapis' %}">Записаться</a></li>
+        <li><a href="{% url 'news' %}">Новости</a></li>
+<!--         <li><a class="drop" href="#">Страницы</a>-->
+<!--          <ul>-->
+<!--            <li><a href="{% url 'product_list' %}">Медецинский персонал</a>-->
+
+<!--            </li>-->
+<!--            <li><a href="#">Записаться</a></li>-->
+<!--          </ul>-->
+<!--        </li>-->
+<!--<a class="dropdown-item" href="{% url 'product_list' %}">-->
+<!--                            Все товары-->
+<!--                        </a>-->
+<!--        <li><a class="drop" href="{% url 'product_list'}">Специалисты</a>-->
+<!--          <ul>-->
+<!--          <li><a href="pages/gallery.html">Gallery</a></li>-->
+<!--            <li><a href="pages/full-width.html">Full Width</a></li>-->
+<!--            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>-->
+<!--            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>-->
+<!--            <li><a href="pages/basic-grid.html">Basic Grid</a></li>-->
+<!--            <li><a href="pages/font-icons.html">Font Icons</a></li>-->
+<!--          </ul>-->
+<!--        </li>-->
+
       </ul>
     </nav>
     <!-- ################################################################################################ -->
@@ -102,10 +109,10 @@ Licence URI: https://www.os-templates.com/template-terms
   <div id="pageintro" class="hoc clear">
     <!-- ################################################################################################ -->
     <article>
-      <p>Aliquam sapien</p>
-      <h3 class="heading">Magna feugiat pulvinar</h3>
-      <p>At dapibus ac velit cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus maecenas ut</p>
-      <footer><a class="btn" href="#">Laoreet pharetra</a></footer>
+      <p>Опытные врачи и Ответственный подход</p>
+      <h3 class="heading">Медицинский Центр</h3>
+      <p> Чтобы не болеть достаточно не болеть🙂</p>
+<!--      <footer><a class="btn" href="#">Laoreet pharetra</a></footer>-->
     </article>
     <!-- ################################################################################################ -->
   </div>
@@ -115,134 +122,81 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper row3">
-  <main class="hoc container clear">
-    <!-- main body -->
-    <!-- ################################################################################################ -->
-    <section id="introblocks">
-      <ul class="nospace group">
-        <li class="one_third">
-          <figure><a class="imgover" href="#"><img src="images/demo/348x220.png" alt=""></a>
-            <figcaption>
-              <h6 class="heading">Aliquam faucibus</h6>
-              <p>Ipsum eu ipsum donec ac orci sed lectus elementum fringilla nullam dictum nisi nec mauris phasellus ut lacus.</p>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="one_third">
-          <figure><a class="imgover" href="#"><img src="images/demo/348x220.png" alt=""></a>
-            <figcaption>
-              <h6 class="heading">Volutpat sed quis</h6>
-              <p>Vel nisi semper adipiscing maecenas sodales elit cras porttitor diam aliquam turpis quisque rhoncus tincidunt.</p>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="one_third">
-          <figure><a class="imgover" href="#"><img src="images/demo/348x220.png" alt=""></a>
-            <figcaption>
-              <h6 class="heading">Leo phasellus sit</h6>
-              <p>Arcu ut auctor nunc ac mi vivamus aliquam maecenas in lorem vel tellus porttitor placerat quisque tellus nulla.</p>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="one_third">
-          <figure><a class="imgover" href="#"><img src="images/demo/348x220.png" alt=""></a>
-            <figcaption>
-              <h6 class="heading">Amet lorem odio</h6>
-              <p>Facilisis et mattis id consectetuer vel nunc donec sagittis purus sit amet est pellentesque elit dolor mattis.</p>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="one_third">
-          <figure><a class="imgover" href="#"><img src="images/demo/348x220.png" alt=""></a>
-            <figcaption>
-              <h6 class="heading">Semper aliquam duis</h6>
-              <p>Ac lobortis sed cursus at magna vivamus laoreet orci vel tortor in nisi in porttitor vulputate arcu integer.</p>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="one_third">
-          <figure><a class="imgover" href="#"><img src="images/demo/348x220.png" alt=""></a>
-            <figcaption>
-              <h6 class="heading">Tempus mauris morbi</h6>
-              <p>Pretium curabitur lacinia aenean eu lectus maecenas at urna morbi porta est a mi duis felis nunc lobortis ut.</p>
-            </figcaption>
-          </figure>
-        </li>
-      </ul>
-    </section>
-    <!-- ################################################################################################ -->
-    <!-- / main body -->
-    <div class="clear"></div>
-  </main>
-</div>
-<!-- ################################################################################################ -->
+
+    {% block product %}
+
+    {% endblock %}
+
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <div class="wrapper row2">
   <section class="hoc container clear">
+    {% block news %}
     <!-- ################################################################################################ -->
     <div class="sectiontitle">
       <p class="nospace font-xs">Mollis eu commodo eu dui quisque</p>
-      <h6 class="heading">Ut ipsum vivamus tincidunt</h6>
+      <h6 class="heading">Гордость нашей больницы </h6>
     </div>
     <ul class="nospace group center">
       <li class="one_third first">
-        <article><a href="#"><i class="fas fa-eraser fa-5x btmspace-50"></i></a>
-          <h6 class="heading">Tincidunt enim etiam</h6>
-          <p class="btmspace-30">Tellus lacus tempor in pharetra id imperdiet sit amet enim suspendisse potenti fusce ornare [&hellip;]</p>
+        <article><a href="#"><img src="/static/images/2.jpeg" alt=""></a>
+          <h6 class="heading">Фролов Степан Максимович</h6>
+          <p class="btmspace-30">С 20 летним стажем работы лишь подчеркивает его статус среди коллег.Спокойный нрав и безупречная харизма лишь делает его самым квалификационным сотрудником в нашей больнице</p>
           <footer><a class="btn" href="#">Read More</a></footer>
         </article>
       </li>
       <li class="one_third">
-        <article><a href="#"><i class="fas fa-chess-bishop fa-5x btmspace-50"></i></a>
-          <h6 class="heading">Congue nulla facilisi</h6>
-          <p class="btmspace-30">Laoreet ligula phasellus pede phasellus faucibus enim quis lacus praesent ipsum vulputate [&hellip;]</p>
+        <article><a href="#"><img src="/static/images/4.jpeg" alt=""></a>
+          <h6 class="heading">Сычев Тимофей Андреевич</h6>
+          <p class="btmspace-30">Очень профисиональный спкциалист. Гениальный врач, проффисионал в своем деле  </p>
           <footer><a class="btn" href="#">Read More</a></footer>
         </article>
       </li>
       <li class="one_third">
-        <article><a href="#"><i class="fas fa-coins fa-5x btmspace-50"></i></a>
-          <h6 class="heading">Nunc congue curabitur</h6>
-          <p class="btmspace-30">Vitae lacinia eu interdum tempus massa in sodales purus non nisi cras porta lacinia ut [&hellip;]</p>
+        <article><a href="#"><img src="/static/images/3.jpg" alt=""></a>
+          <h6 class="heading">Кузьмин Михаил Максимович</h6>
+          <p class="btmspace-30">Здоровый пациент то его второе имя. мастерски обращяется со всеми пациентами как и с пожилыми так и юными. Сможет принять самое трудное решение в самый трудный момент</p>
           <footer><a class="btn" href="#">Read More</a></footer>
         </article>
       </li>
     </ul>
     <!-- ################################################################################################ -->
+    {% endblock %}
   </section>
 </div>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
+
 <div class="wrapper row3">
   <section class="hoc container clear">
     <!-- ################################################################################################ -->
     <div class="sectiontitle">
       <p class="nospace font-xs">Id erat duis nibh diam at</p>
-      <h6 class="heading">Vulputate quis lacus nullam</h6>
+      <h6 class="heading">Средний показатель в больнице</h6>
     </div>
     <ul id="stats" class="nospace group">
       <li><i class="fas fa-id-badge"></i>
-        <p><a href="#">123</a></p>
-        <p>Augue dui convallis</p>
+        <p><a href="#">914357</a></p>
+        <p>Вылечили людей </p>
       </li>
       <li><i class="fas fa-skull"></i>
-        <p><a href="#">1234</a></p>
-        <p>Id ullamcorper</p>
+        <p><a href="#">009</a></p>
+        <p>Умерло людей</p>
       </li>
       <li><i class="fas fa-umbrella"></i>
-        <p><a href="#">12345</a></p>
-        <p>Malesuada interdum</p>
+        <p><a href="#">97456132</a></p>
+        <p>В больнице находится</p>
       </li>
       <li><i class="fas fa-store-alt"></i>
         <p><a href="#">6789</a></p>
-        <p>Tristique viverra</p>
+        <p>В постельном режиме</p>
       </li>
     </ul>
     <!-- ################################################################################################ -->
   </section>
 </div>
+
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -267,47 +221,29 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
+
 <div class="wrapper row3">
   <section class="hoc container clear">
     <!-- ################################################################################################ -->
     <div class="sectiontitle">
       <p class="nospace font-xs">Nisl sed blandit iaculis lectus</p>
-      <h6 class="heading">Nam et erat nec eros elementum</h6>
+      <h6 class="heading"><h1>О клинике</h1>
+
+ Знание всех тонкостей и деталей своей профессии высокий уровень мастерства талант личная философия успеха бесконечный действенный интерес к профессии. Ключевая задача «клиники» – оказывать комплексную квалифицированную медицинскую помощь каждому пациенту. При этом любые назначения врачей клиники всегда учитывают специфику состояния пациента. Современные методики лечения точная диагностика современные лекарственные препараты индивидуальный подход минимальные побочные эффекты.
+      Мы помогаем своим пациентам сохранить красоту восстановить и приумножить здоровье. Эту задачу мы решаем, используя самые современные и надежные медицинские технологии, опыт и квалификацию наших врачей.
+Мы опираемся в своей работу на мировые достижения в области медицины. Наши врачи постоянно повышают свою квалификацию. Мы хотим, чтобы на смену истории болезни пришли истории здоровья.
+Ведь здоровье - одна из важнейших ценностей современного мира. Только здоровые и красивые люди могут быть по - настоящему успешны и счастливы.
+Мы несем ответственность перед пациентами за профессиональный уровень своих сотрудников, а перед сотрудниками - за обеспечение достойного уровня жизни.
+Мы пропагандируем здоровый образ жизни и создаем условия для того, чтобы здоровых и красивых людей в нашем обществе с каждым днем становилось все больше и больше.
+Green Clinic дает возможность всем жителям и гостям столицы воспользоваться медицинским обслуживанием, отвечающим самым высоким требованиям и стандартам.
+</h6>
     </div>
-    <ul class="nospace group latest">
-      <li class="one_half first">
-        <article>
-          <div class="excerpt">
-            <ul class="nospace meta">
-              <li><i class="fas fa-user"></i> <a href="#">Admin</a></li>
-              <li><i class="fas fa-tag"></i> <a href="#">Category Name</a></li>
-            </ul>
-            <h6 class="heading">Gravida integer tristique</h6>
-            <p>Dui vel odio proin magna ligula pellentesque eu tincidunt sed ornare tempor nisl in id dui vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec [<a href="#">&hellip;</a>]</p>
-            <footer><a href="#">Read More</a></footer>
-          </div>
-          <time datetime="2045-04-06T08:15+00:00"><strong>06</strong> <em>Apr</em></time>
-        </article>
-      </li>
-      <li class="one_half">
-        <article>
-          <div class="excerpt">
-            <ul class="nospace meta">
-              <li><i class="fas fa-user"></i> <a href="#">Admin</a></li>
-              <li><i class="fas fa-tag"></i> <a href="#">Category Name</a></li>
-            </ul>
-            <h6 class="heading">Eleifend semper nisl sed</h6>
-            <p>Eget lorem in in felis in metus mollis blandit ut eu justo suspendisse semper sem sit amet ligula quisque eget felis eu tortor tristique pharetra praesent turpis pede varius sed [<a href="#">&hellip;</a>]</p>
-            <footer><a href="#">Read More</a></footer>
-          </div>
-          <time datetime="2045-04-05T08:15+00:00"><strong>05</strong> <em>Apr</em></time>
-        </article>
-      </li>
-    </ul>
+
     <footer class="center"><a class="btn" href="#">View More</a></footer>
     <!-- ################################################################################################ -->
   </section>
 </div>
+
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -384,17 +320,6 @@ Licence URI: https://www.os-templates.com/template-terms
     </div>
     <!-- ################################################################################################ -->
   </footer>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row5">
-  <div id="copyright" class="hoc clear">
-    <!-- ################################################################################################ -->
-    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
-    <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
-    <!-- ################################################################################################ -->
-  </div>
 </div>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->

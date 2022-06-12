@@ -28,3 +28,17 @@ class Order(models.Model):
         choices=ORDER_STATUSES,
         default=STATUS_NEW
     )
+
+
+class Articles(models.Model):
+    title = models.CharField('Нaзвание', max_length = 50)
+    anons = models.CharField("Анонс", max_length=250)
+    full_text = models.TextField("Cтатья")
+    date = models.DateTimeField("ДАта публикации")
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "новость"
+        verbose_name_plural = "Новости"

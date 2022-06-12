@@ -34,8 +34,8 @@ class Product(models.Model):
     name = models.CharField("Имя",max_length=225)
     descriptions = models.TextField("краткая биография")
     price = models.DecimalField("цена", max_digits=10,decimal_places=2)
-    image = models.ImageField("фото", upload_to = "product_images/")
-    category = models.ForeignKey(Category,on_delete=models.PROTECT)
+    image = models.ImageField("фото", upload_to ="product_images/")
+    category = models.ForeignKey(Category, on_delete=models.PROTECT)
     subcategory = models.ForeignKey(SubCategory,on_delete= models.PROTECT,related_name="products")
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -77,3 +77,7 @@ class BanerImage(models.Model):
 
     def __str__(self):
         return self.name
+
+#
+# class Images(models.Model):
+#     model_img = models.ImageField(upload_to='static/img')
