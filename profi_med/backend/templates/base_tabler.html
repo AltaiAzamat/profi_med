@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+
 <!--
 Template Name: Foxclore
 Author: <a href="https://www.os-templates.com/">OS Templates</a>
@@ -24,16 +25,14 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- Top Background Image Wrapper -->
-
 <div class="bgded overlay" style="background-image:url('./static/images/giphy.gif');">
   <!-- ################################################################################################ -->
   <header id="header" class="hoc clear">
     <!-- ################################################################################################ -->
     <div id="logo" class="one_quarter first">
       <h1><a href="index.html">
-        {% block title%}
         Главная
-        {% endblock %}
+
       </a></h1>
       <p>Страница</p>
     </div>
@@ -55,37 +54,36 @@ Licence URI: https://www.os-templates.com/template-terms
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
-  <section id="navwrapper" class="hoc clear">
+  <section id="navwrapper" class="center">
     <!-- ################################################################################################ -->
     <nav id="mainav">
-      <ul class="clear">
+      <ul class="center">
+        <li class="active"><a href="{% url 'index' %}">
+        Главная
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"/>
+        </svg>
+        </a></li>
+        <li><a href="{% url 'product_list' %}">Медецинский персонал
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+        <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
+        </svg>
+        </a>
+        <li><a href="{% url 'news' %}">Новости
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-receipt" viewBox="0 0 16 16">
+        <path d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51z"/>
+        <path d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+        </a></li>
+        <li><a href="{% url 'zapis' %}">
+        <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#ZapisModal">Записаться
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-checklist" viewBox="0 0 16 16">
+        <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+        <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+        </svg>
+        </button>
+        </a></li>
 
-
-        <li class="active"><a href="{% url 'index' %}">Главная</a></li>
-        <li><a href="{% url 'product_list' %}">Медецинский персонал</a>
-        <li><a href="{% url 'zapis' %}">Записаться</a></li>
-        <li><a href="{% url 'news' %}">Новости</a></li>
-<!--         <li><a class="drop" href="#">Страницы</a>-->
-<!--          <ul>-->
-<!--            <li><a href="{% url 'product_list' %}">Медецинский персонал</a>-->
-
-<!--            </li>-->
-<!--            <li><a href="#">Записаться</a></li>-->
-<!--          </ul>-->
-<!--        </li>-->
-<!--<a class="dropdown-item" href="{% url 'product_list' %}">-->
-<!--                            Все товары-->
-<!--                        </a>-->
-<!--        <li><a class="drop" href="{% url 'product_list'}">Специалисты</a>-->
-<!--          <ul>-->
-<!--          <li><a href="pages/gallery.html">Gallery</a></li>-->
-<!--            <li><a href="pages/full-width.html">Full Width</a></li>-->
-<!--            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>-->
-<!--            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>-->
-<!--            <li><a href="pages/basic-grid.html">Basic Grid</a></li>-->
-<!--            <li><a href="pages/font-icons.html">Font Icons</a></li>-->
-<!--          </ul>-->
-<!--        </li>-->
 
       </ul>
     </nav>
@@ -131,7 +129,6 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <div class="wrapper row2">
   <section class="hoc container clear">
-    {% block news %}
     <!-- ################################################################################################ -->
     <div class="sectiontitle">
       <p class="nospace font-xs">Mollis eu commodo eu dui quisque</p>
@@ -139,21 +136,21 @@ Licence URI: https://www.os-templates.com/template-terms
     </div>
     <ul class="nospace group center">
       <li class="one_third first">
-        <article><a href="#"><img src="/static/images/2.jpeg" alt=""></a>
+        <article><a href="#"><img src="/static/images/5.jpg" style = "width:300px; height:300px"></a>
           <h6 class="heading">Фролов Степан Максимович</h6>
           <p class="btmspace-30">С 20 летним стажем работы лишь подчеркивает его статус среди коллег.Спокойный нрав и безупречная харизма лишь делает его самым квалификационным сотрудником в нашей больнице</p>
           <footer><a class="btn" href="#">Read More</a></footer>
         </article>
       </li>
       <li class="one_third">
-        <article><a href="#"><img src="/static/images/4.jpeg" alt=""></a>
+        <article><a href="#"><img src="/static/images/6.JPG" style = "width:300px; height:300px"></a>
           <h6 class="heading">Сычев Тимофей Андреевич</h6>
           <p class="btmspace-30">Очень профисиональный спкциалист. Гениальный врач, проффисионал в своем деле  </p>
           <footer><a class="btn" href="#">Read More</a></footer>
         </article>
       </li>
       <li class="one_third">
-        <article><a href="#"><img src="/static/images/3.jpg" alt=""></a>
+        <article><a href="#"><img src="/static/images/3.jpg" style = "width:300px; height:300px" ></a>
           <h6 class="heading">Кузьмин Михаил Максимович</h6>
           <p class="btmspace-30">Здоровый пациент то его второе имя. мастерски обращяется со всеми пациентами как и с пожилыми так и юными. Сможет принять самое трудное решение в самый трудный момент</p>
           <footer><a class="btn" href="#">Read More</a></footer>
@@ -161,7 +158,7 @@ Licence URI: https://www.os-templates.com/template-terms
       </li>
     </ul>
     <!-- ################################################################################################ -->
-    {% endblock %}
+
   </section>
 </div>
 <!-- ################################################################################################ -->
@@ -200,6 +197,7 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
+
 <div class="wrapper coloured">
   <section id="testimonials" class="hoc container clear">
     <!-- ################################################################################################ -->
@@ -207,11 +205,7 @@ Licence URI: https://www.os-templates.com/template-terms
       <p class="nospace font-xs">At ante morbi consequat lobortis</p>
       <h6 class="heading">Eros suspendisse scelerisque</h6>
     </div>
-    <article class="one_half first"><img src="images/demo/100x100.png" alt="">
-      <blockquote>Proin sed sapien ut convallis lectus ac magna nulla mattis purus phasellus consectetuer fermentum augue integer vulputate lectus vitae lorem suspendisse potenti donec suscipit.</blockquote>
-      <h6 class="heading">J. Doe</h6>
-      <em>Nulla mauris hendrerit</em></article>
-    <article class="one_half"><img src="images/demo/100x100.png" alt="">
+    <article class="one_half"><img src="" alt="">
       <blockquote>Pellentesque et ipsum mattis ipsum pellentesque pretium proin rutrum turpis non accumsan aliquet odio magna luctus neque in adipiscing mi odio ac felis sed mattis enim quis ipsum.</blockquote>
       <h6 class="heading">G. Doe</h6>
       <em>Aenean vestibulum mattis</em></article>
@@ -229,19 +223,19 @@ Licence URI: https://www.os-templates.com/template-terms
       <p class="nospace font-xs">Nisl sed blandit iaculis lectus</p>
       <h6 class="heading"><h1>О клинике</h1>
 
- Знание всех тонкостей и деталей своей профессии высокий уровень мастерства талант личная философия успеха бесконечный действенный интерес к профессии. Ключевая задача «клиники» – оказывать комплексную квалифицированную медицинскую помощь каждому пациенту. При этом любые назначения врачей клиники всегда учитывают специфику состояния пациента. Современные методики лечения точная диагностика современные лекарственные препараты индивидуальный подход минимальные побочные эффекты.
-      Мы помогаем своим пациентам сохранить красоту восстановить и приумножить здоровье. Эту задачу мы решаем, используя самые современные и надежные медицинские технологии, опыт и квалификацию наших врачей.
-Мы опираемся в своей работу на мировые достижения в области медицины. Наши врачи постоянно повышают свою квалификацию. Мы хотим, чтобы на смену истории болезни пришли истории здоровья.
-Ведь здоровье - одна из важнейших ценностей современного мира. Только здоровые и красивые люди могут быть по - настоящему успешны и счастливы.
+
 Мы несем ответственность перед пациентами за профессиональный уровень своих сотрудников, а перед сотрудниками - за обеспечение достойного уровня жизни.
 Мы пропагандируем здоровый образ жизни и создаем условия для того, чтобы здоровых и красивых людей в нашем обществе с каждым днем становилось все больше и больше.
 Green Clinic дает возможность всем жителям и гостям столицы воспользоваться медицинским обслуживанием, отвечающим самым высоким требованиям и стандартам.
 </h6>
     </div>
+<!--   <button type ="button" class="btn btn-warning" data-toggle="modal" data-targer="zapis_modal">Записаться</button>-->
 
-    <footer class="center"><a class="btn" href="#">View More</a></footer>
+    <footer class="center"><button type ="button" class="btn btn-warning" data-toggle="modal" data-target="#zapis_modal">Записаться</button></footer>
     <!-- ################################################################################################ -->
   </section>
+
+
 </div>
 
 <!-- ################################################################################################ -->
@@ -320,7 +314,11 @@ Green Clinic дает возможность всем жителям и гост
     </div>
     <!-- ################################################################################################ -->
   </footer>
+
+
+
 </div>
+
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -330,4 +328,36 @@ Green Clinic дает возможность всем жителям и гост
 <script src="{% static 'layout/scripts/jquery.backtotop.js' %}"></script>
 <script src="{% static 'layout/scripts/jquery.mobilemenu.js' %}"></script>
 </body>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Open modal for @fat</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+
+<div class="modal fade" id="ZapisModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </html>

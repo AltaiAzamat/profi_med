@@ -1,33 +1,32 @@
 {% extends 'base_tabler.html'%}
+    {% block title %}
+        Мед. Персонал
 
-<div class="bgded overlay" style="background-image:url('./static/images/giphy.gif');">
+    {% endblock %}
 
-{% block title %}
-Мед. Персонал
-{% endblock %}
-
-{% block product %}
- {% for products in page_obj %}
- <section id="introblocks">
+    {% block product %}
+         {% for products in page_obj %}
+<div class="wrapper row3">
+  <main class="hoc container clear">
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+   <section id="introblocks">
       <ul class="nospace group">
         <li class="one_third">
-          <figure>
-              <a style="" class="imgover" href="">
-                  <img style="width:200px" src="{{products.image.url}}">
-              </a>
-<!--              <a style="width:400px" class="imgover">-->
-<!--            <img src="{{products.image}}" alt="200px" class="card-img-top">-->
-<!--          </a>-->
+          <figure><a class="imgover" href="#"><img src="{{products.image.url}}"  alt=""></a>
             <figcaption>
               <h6 class="heading">{{products.name}}</h6>
               <p>{{products.descriptions}}</p>
+                <h1>{{products.price}}сом за услуги</h1>
             </figcaption>
-              <div class="text-muted"><h3>{{products.price}}сом</h3> </div>
-
           </figure>
         </li>
-
       </ul>
-    </section>
-{% endfor %}
-{% endblock %}
+   </section>
+    <div class="clear"></div>
+  </main>
+</div>
+        {% endfor %}
+    {% endblock %}
+
+

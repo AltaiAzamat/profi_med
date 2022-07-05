@@ -1,14 +1,250 @@
-{% extends 'base_tabler.html' %}
+<!DOCTYPE html>
+{% load static %}
+
+<!--
+Template Name: Foxclore
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+
+<title>Hospital
+</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay" style="background-image:url('./static/images/giphy.gif');">
+  <!-- ################################################################################################ -->
+  <header id="header" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <div id="logo" class="one_quarter first">
+      <h1><a href="index.html">
+        Новости
+      </a></h1>
+      <p>Страница</p>
+    </div>
+    <div class="three_quarter">
+      <ul class="nospace clear">
+        <li class="one_third first">
+          <div class="block clear"><a href="#"><i class="fas fa-phone"></i></a> <span><strong>Горячий номер:</strong> +00 (123) 456 7890</span></div>
+        </li>
+        <li class="one_third">
+          <div class="block clear"><a href="#"><i class="fas fa-envelope"></i></a> <span><strong>Наш @mail аддрес:</strong> support@domain.com</span></div>
+        </li>
+        <li class="one_third">
+          <div class="block clear"><a href="#"><i class="fas fa-clock"></i></a> <span><strong> Время работы:</strong> 24/7</span></div>
+        </li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </header>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <section id="navwrapper" class="center">
+    <!-- ################################################################################################ -->
+    <nav id="mainav">
+      <ul class="center">
+        <li class="active"><a href="{% url 'index' %}">
+        Главная
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"/>
+        </svg>
+        </a></li>
+        <li><a href="{% url 'product_list' %}">Медецинский персонал
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+        <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
+        </svg>
+        </a>
+        <li><a href="{% url 'news' %}">Новости
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-receipt" viewBox="0 0 16 16">
+        <path d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51z"/>
+        <path d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+        </a></li>
+        <li><a href="{% url 'zapis' %}">
+        <button type="button" class="btn btn-outline-success" >Записаться
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-checklist" viewBox="0 0 16 16">
+        <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+        <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+        </svg>
+        </button>
+        </a></li>
 
 
-{% block title %}
-Новости
-{% endblock %}
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+    <div id="searchform">
+      <div>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Quick Search:</legend>
+            <input type="text" placeholder="Enter search term&hellip;">
+            <button type="submit"><i class="fas fa-search"></i></button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <!-- ################################################################################################ -->
+  </section>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div id="pageintro" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <article>
+      <p>Опытные врачи и Ответственный подход</p>
+      <h3 class="heading">Медицинский Центр</h3>
+      <p> Чтобы не болеть достаточно не болеть🙂</p>
+<!--      <footer><a class="btn" href="#">Laoreet pharetra</a></footer>-->
+    </article>
+    <!-- ################################################################################################ -->
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+
+<div class="wrapper row3">
+  <section class="hoc container clear">
+    {% for news in news %}
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <div class="row row-cards">
+              <div class="col-sm-6 col-lg-4">
+                <div class="card card-sm">
+                  <a href="#" class="d-block"><img src="{{news.image.url}}" class="card-img-top"></a>
+                  <div class="card-body">
+                    <div class="d-flex align-items-center">
+                      <span class="avatar me-3 rounded" style="background-image: url(./static/avatars/000m.jpg)"></span>
+                      <div>
+                        <div>{{news.title}}</div>
+                        <h2>{{news.full_text}}</h2>
+                        <div class="text-muted">{{news.date}}</div>
+                      </div>
+                      <div class="ms-auto">
+                        <a href="#" class="text-muted">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/eye -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="2"></circle><path d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7"></path></svg>
+                          467
+                        </a>
+                        <a href="#" class="ms-3 text-muted">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/heart -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path></svg>
+                          67
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </div>
+    {% endfor %}
+  </section>
+</div>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="bgded overlay row4" style="background-image:url('images/demo/backgrounds/01.png');">
+  <footer id="footer" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <div class="center btmspace-50">
+      <h6 class="heading">Foxclore</h6>
+      <ul class="faico clear">
+        <li><a class="faicon-dribble" href="#"><i class="fab fa-dribbble"></i></a></li>
+        <li><a class="faicon-facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a class="faicon-google-plus" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+        <li><a class="faicon-linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+        <li><a class="faicon-twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a class="faicon-vk" href="#"><i class="fab fa-vk"></i></a></li>
+      </ul>
+      <p class="nospace">Sed pellentesque in nisi nulla facilisi sed pretium duis varius ut ut.</p>
+    </div>
+    <!-- ################################################################################################ -->
+    <hr class="btmspace-50">
+    <!-- ################################################################################################ -->
+    <div class="one_quarter first">
+      <h6 class="heading">Nunc neque pellentesque</h6>
+      <p class="nospace btmspace-15">Interdum velit vitae pede aliquam mollis neque ut ullamcorper tempor dolor.</p>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Newsletter:</legend>
+          <input class="btmspace-15" type="text" value="" placeholder="Name">
+          <input class="btmspace-15" type="text" value="" placeholder="Email">
+          <button type="submit" value="submit">Submit</button>
+        </fieldset>
+      </form>
+    </div>
+    <div class="one_quarter">
+      <h6 class="heading">Tortor varius nisi</h6>
+      <ul class="nospace linklist">
+        <li>
+          <article>
+            <p class="nospace btmspace-10"><a href="#">Id euismod est risus ac neque aliquam erat volutpat pellentesque adipiscing.</a></p>
+            <time class="block font-xs" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>
+          </article>
+        </li>
+        <li>
+          <article>
+            <p class="nospace btmspace-10"><a href="#">Nunc hendrerit adipiscing nulla donec vestibulum odio quisque gravida morbi.</a></p>
+            <time class="block font-xs" datetime="2045-04-05">Thursday, 5<sup>th</sup> April 2045</time>
+          </article>
+        </li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="heading">Vel condimentum auctor</h6>
+      <ul class="nospace linklist">
+        <li><a href="#">Hendrerit id lacus praesent</a></li>
+        <li><a href="#">Ullamcorper risus gravida</a></li>
+        <li><a href="#">Suscipit tempor turpis</a></li>
+        <li><a href="#">Pede dictum ipsum vel auctor</a></li>
+        <li><a href="#">Leo est tincidunt est sed</a></li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="heading">Nunc sapien varius</h6>
+      <ul class="nospace clear latestimg">
+        <li><a class="imgover" href="#"><img src="images/demo/100x100.png" alt=""></a></li>
+        <li><a class="imgover" href="#"><img src="images/demo/100x100.png" alt=""></a></li>
+        <li><a class="imgover" href="#"><img src="images/demo/100x100.png" alt=""></a></li>
+        <li><a class="imgover" href="#"><img src="images/demo/100x100.png" alt=""></a></li>
+        <li><a class="imgover" href="#"><img src="images/demo/100x100.png" alt=""></a></li>
+        <li><a class="imgover" href="#"><img src="images/demo/100x100.png" alt=""></a></li>
+        <li><a class="imgover" href="#"><img src="images/demo/100x100.png" alt=""></a></li>
+        <li><a class="imgover" href="#"><img src="images/demo/100x100.png" alt=""></a></li>
+        <li><a class="imgover" href="#"><img src="images/demo/100x100.png" alt=""></a></li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
 
 
 
-{% block news %}
+</div>
 
-ewsfhiuesfh
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="{% static 'layout/scripts/jquery.min.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.backtotop.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.mobilemenu.js' %}"></script>
+</body>
 
-{% endblock %}
+
+</html>

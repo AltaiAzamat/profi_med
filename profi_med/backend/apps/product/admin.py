@@ -10,12 +10,7 @@ class ProductAdmin(admin.ModelAdmin):
 
 @admin.register(SubCategory)
 class SubCategory(admin.ModelAdmin):
-    list_display = (
-        'name',
-        'category',
-        'slug',
-        'id'
-    )
+    list_display = ('name','category','slug','id')
     list_filter = ('category',)
     prepopulated_fields = {'slug': ('name',)}
     search_fields = ('id','name')
